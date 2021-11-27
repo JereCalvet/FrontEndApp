@@ -1,8 +1,9 @@
 <div class="body">
     <div class="login">
         <form [formGroup]="form" (ngSubmit)="login()">
-            <h1>Login</h1>
-            <img class="img" src="./assets/img/programmer.png" alt="user img">
+            <img class="logo" src="./assets/img/programmer.png" alt="logo">
+            <div class="mat-title">Bienvenido</div>
+            <div class="mat-subheading-2">Ingresa para continuar.</div>
             <mat-form-field class="ancho" appearance="fill">
                 <mat-label>Usuario</mat-label>
                 <input matInput formControlName="user" autocomplete="off" placeholder="jere.calvet@example.com">

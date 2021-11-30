@@ -12,6 +12,9 @@ import { LoginComponent } from './components/login/login.component';
 // Material components
 import { MateriaDesignModule } from './modules/material-design/material-design.module';
 
+// Angular Flex Layout
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { MateriaDesignModule } from './modules/material-design/material-design.m
     AppRoutingModule,
     BrowserAnimationsModule,
     MateriaDesignModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

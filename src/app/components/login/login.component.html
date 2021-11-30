@@ -1,22 +1,59 @@
-<div class="body">
-    <div class="login">
+<div fxLayoutAlign="center center" fxFlexFill class="color-fondo">
+
+    <mat-card fxLayout="column">
+
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title>Login</mat-card-title>
+                <mat-card-subtitle>Please login to your account</mat-card-subtitle>
+                <img mat-card-sm-image src="./assets/img/programmer.png" alt="logo">
+            </mat-card-title-group>
+        </mat-card-header>
         <form [formGroup]="form" (ngSubmit)="login()">
-            <img class="logo" src="./assets/img/programmer.png" alt="logo">
-            <div class="mat-title">Bienvenido</div>
-            <div class="mat-subheading-2">Ingresa para continuar.</div>
-            <mat-form-field class="ancho" appearance="fill">
-                <mat-label>Usuario</mat-label>
-                <input matInput formControlName="user" autocomplete="off" placeholder="jere.calvet@example.com">
-            </mat-form-field>
-            <mat-form-field class="ancho" appearance="fill">
-                <mat-label>Contraseña</mat-label>
-                <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" autocomplete="off">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Ocultar Contraseña'"
-                    [attr.aria-pressed]="hide">
-                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <div fxLayout="column" fxLayoutAlign="center stretch">
+                <mat-form-field appearance="fill">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput formControlName="user" placeholder="jere_calvet@example.com">
+                    <!-- <mat-error *ngIf="form.get('user').hasError('required')">
+                    Email es <strong>requerido</strong>
+                </mat-error> -->
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                    <!-- <mat-error *ngIf="form.get('password').hasError('required')">
+                    Contraseña es <strong>requerida</strong>
+                </mat-error> -->
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Ocultar Contraseña'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <button mat-raised-button type="submit" [disabled]="form.invalid" color="primary">
+                    Ingresar
                 </button>
-            </mat-form-field>
-            <button mat-raised-button class="ancho" type="submit" [disabled]="form.invalid" color="primary">Ingresar</button>
+            </div>
+
         </form>
-    </div>    
+
+        <mat-card-actions>
+                <button mat-raised-button color="primary" >
+                    <i class="fab fa-google"></i> 
+                    <span>Login con Google</span>   
+                </button>
+                <button mat-raised-button color="primary">
+                    <i class="fab fa-facebook-square"></i>
+                    <!-- Login con Facebook -->
+                </button>
+        </mat-card-actions>
+
+
+
+
+
+    </mat-card>
+
+    <mat-divider></mat-divider>
+
 </div>

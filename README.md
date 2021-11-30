@@ -1,3 +1,53 @@
+<!-- <div class="body">
+    <div class="login">
+        <mat-card>
+            <img mat-card-image class="logo" src="./assets/img/programmer.png" alt="logo">
+            <mat-card-title class="mat-title">Bienvenido</mat-card-title>
+            <mat-card-subtitle class="mat-subheading-2">Ingresar para continuar.</mat-card-subtitle>
+            <form [formGroup]="form" (ngSubmit)="login()">
+                <mat-form-field class="ancho" appearance="fill">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput formControlName="user" placeholder="jere.calvet@example.com">
+                     <mat-error *ngIf="form.get('user').hasError('required')">
+                        Email es <strong>requerido</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="ancho" appearance="fill">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                     <mat-error *ngIf="form.get('password').hasError('required')">
+                        Contraseña es <strong>requerida</strong>
+                    </mat-error>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Ocultar Contraseña'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <section class="remember-forgot">
+                    <mat-checkbox>Recordame</mat-checkbox> <!-- [(ngModel)]="checked"
+                    <a href="">Te olvidaste la Contraseña?</a>
+                </section>
+                <button mat-raised-button class="ancho" type="submit" [disabled]="form.invalid" color="primary">
+                    Ingresar
+                </button>
+            </form>
+            <br>
+            <mat-divider>or</mat-divider>
+            <br>
+            <mat-card-actions>
+                <button mat-raised-button class="ancho" color="primary">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">google</mat-icon>
+                    <i class="fab fa-google"></i>Login con Google
+                </button>
+                <button mat-raised-button class="ancho" color="primary">
+                    <i class="fab fa-facebook-square"></i>Login con Facebook
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div> -->
+
+
 # FrontEndApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
